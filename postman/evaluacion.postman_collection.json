@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "78c3adf8-e875-4d21-bb3c-b05b025da86e",
+		"name": "evaluacion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3778012"
+	},
+	"item": [
+		{
+			"name": "getUsers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ7XCJlbWFpbFwiOlwibWFycmlvYW5kcmVzOTJiYmJiYkBnbWFpbC5jb21cIn0iLCJpc3MiOiJodHRwXC9cL2xvY2FsaG9zdDo4MDgwIiwiZXhwIjo2MTY1MzkyMjM0NiwiaWF0IjoxNjUzOTIyMzQ2fQ.DVY1GYWRDm5lRtb1Ds9titOtkrv2dgxp8xbFKd9HN8I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Mario\",\n    \"password\" : \"Prueabab12\",\n    \"email\" : \"marrioandres92bbbbb@gmail.com\",\n    \"phones\": [\n        {\n            \"number\": \"1234567\",\n            \"citycode\" : \"1\",\n            \"countrycode\": \"57\"\n        }\n        \n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
