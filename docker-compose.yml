@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  backend:
+    container_name: evaluacion-global
+    image: marioecheverria/evaluacion-global:v1
+    mem_limit: 2048m
+    mem_reservation: 1024m
+    cpus: 2.0
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - main
+networks:
+  main:
